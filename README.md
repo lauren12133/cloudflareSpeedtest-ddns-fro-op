@@ -7,7 +7,7 @@
 ## 如何使用
 不想写还是给会的人用吧，不懂尽量别碰。。。提供下思路。。
 
-1、下载XIU2/CloudflareSpeedTest脚本放入openwrt里，教程XIU2大佬的项目里很清晰。
+1、下载XIU2/CloudflareSpeedTest脚本放入openwrt里，教程XIU2大佬的项目里很清晰。装在root目录下才可以使用本项目脚本，如果不想装root下，请自行更改脚本运行路径。。。
 
 2、下载本项目里的脚本文件，放在CloudflareSpeedTest脚本项目文件夹里，加个权限，运行即可。。
 
