@@ -9,9 +9,10 @@
 1、下载XIU2/CloudflareSpeedTest脚本放入openwrt里，教程XIU2大佬的项目里很清晰。
 2、下载本项目里的脚本文件，加个权限，放在加速项目文件夹里，运行即可。。
 
-
-
 如需自动定时执行，请查阅 `cron` 相关知识。openwrt可以直接计划任务实现。
+
+## 其他系统请去@CrazyBoyFeng 大佬里下载使用
+bye！
 
 ## 捐赠与赞助  可以去赞助下@CrazyBoyFeng 大佬
 * [支付宝](https://user-images.githubusercontent.com/1733254/110204402-bbcabc80-7ead-11eb-8bbc-9be2041214c2.png)
