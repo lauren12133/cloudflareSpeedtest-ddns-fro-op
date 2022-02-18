@@ -19,19 +19,11 @@ function get_ip {
 }
 
 function test_ipv4 {
-    cp -f ip.txt ip.tmp
-    echo "" >> ip.tmp
-    echo "$ip/32" >> ip.tmp
-    ./CloudflareST -tl 500 -sl 0.1 -p 0 -f ip.tmp
-    rm -f ip.tmp
+    cd /root/CloudflareST && ./CloudflareST -tl 500 -sl 0.1 -p 0 -f ip.txt
 }
 
 function test_ipv6 {
-    cp -f ipv6.txt ipv6.tmp
-    echo "" >> ipv6.tmp
-    echo "$ip/128" >> ipv6.tmp
-    ./CloudflareST -p 0 -ipv6 -f ipv6.tmp
-    rm -f ipv6.tmp
+    cd /root/CloudflareST && ./CloudflareST -p 0 -ipv6 -f ipv6.txt
 }
 
 function get_header { #登录
