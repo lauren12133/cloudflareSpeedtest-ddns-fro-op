@@ -1,6 +1,6 @@
 #!/bin/bash
 #请先去 DNSPod 后台增加一条A记录或AAAA记录然后填写以下参数：
-sub_domain="你的主机记录（不含主域名部分）若只有主域名则留空或删除该参数"
+sub_domain="你的主机记录 例do.baidu.com 前面这个“do”就是这个（不含主域名部分）若只有主域名则留空或删除该参数 "
 domain="你的主域名"
 #以下两项从控制台生成 https://console.dnspod.cn/account_id/token
 account_id="ID"
@@ -25,19 +25,11 @@ function get_ip {
 }
 
 function test_ipv4 {
-    cp -f ip.txt ip.tmp
-    echo "" >> ip.tmp
-    echo "$ip/32" >> ip.tmp
-    ./CloudflareST -tl 500 -sl 0.1 -p 0 -f ip.tmp
-    rm -f ip.tmp
+    cd /root/CloudflareST && ./CloudflareST -tl 500 -sl 0.1 -p 0 -f ip.txt
 }
 
 function test_ipv6 {
-    cp -f ipv6.txt ipv6.tmp
-    echo "" >> ipv6.tmp
-    echo "$ip/128" >> ipv6.tmp
-    ./CloudflareST -p 0 -ipv6 -f ipv6.tmp
-    rm -f ipv6.tmp
+    cd /root/CloudflareST && ./CloudflareST -p 0 -ipv6 -f ipv6.txt
 }
 
 function search_record { #查找ip对应的记录集id
@@ -60,7 +52,7 @@ function search_record { #查找ip对应的记录集id
 
 function get_best {
     #best=`sed -n 2p result.csv | grep -o '^[^,]*'`
-    best=`sed -n 2p result.csv | cut -d, -f1`
+    best=`sed -n 2p /root/CloudflareST/result.csv | cut -d, -f1`
     if [ ! $best ] ; then
         echo "Can not get the best Cloudflare IP"
         exit 31
