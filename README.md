@@ -5,14 +5,13 @@
 
 
 ## 如何使用
-登录你的 DNS 服务提供商，添加域名解析记录。  
-_如果使用分地区按运营商线路解析功能，请注意不同线路的初始 IP 不能重复。_
+不想写还是给会的人用吧，不懂尽量别碰。。。提供下思路。。
+1、下载XIU2/CloudflareSpeedTest脚本放入openwrt里，教程XIU2大佬的项目里很清晰。
+2、下载本项目里的脚本文件，加个权限，放在加速项目文件夹里，运行即可。。
 
-1. 下载所用 DNS 服务提供商对应目录内的 `optimize-dns-cloudflare-ip.bash` 至 `CloudflareST` 所在目录。  
-2. 修改 `optimize-dns-cloudflare-ip.bash`，按要求填写参数。  
-3. 执行 `optimize-dns-cloudflare-ip.bash`。
 
-如需自动定时执行，请查阅 `cron` 相关知识。
+
+如需自动定时执行，请查阅 `cron` 相关知识。openwrt可以直接计划任务实现。
 
 ## 捐赠与赞助  可以去赞助下@CrazyBoyFeng 大佬
 * [支付宝](https://user-images.githubusercontent.com/1733254/110204402-bbcabc80-7ead-11eb-8bbc-9be2041214c2.png)
