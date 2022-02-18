@@ -9,7 +9,7 @@
 
 1、下载XIU2/CloudflareSpeedTest脚本放入openwrt里，教程XIU2大佬的项目里很清晰。装在root目录下才可以使用本项目脚本，如果不想装root下，请自行更改脚本运行路径。。。
 
-2、下载本项目里的脚本文件，放在CloudflareSpeedTest脚本项目文件夹里，加个权限，运行即可。。
+2、下载本项目里的脚本文件，放在CloudflareSpeedTest脚本项目文件夹里，加个权限，运行即可。。第一次运行会提示result.csv查不到这个文件 重新运行一次就可以了
 
 如需自动定时执行，请查阅 `cron` 相关知识。openwrt可以直接计划任务实现。
 
