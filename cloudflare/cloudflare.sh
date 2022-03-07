@@ -35,7 +35,18 @@ function test_ipv4 {
 function test_ipv6 {
     cd /root/CloudflareST && ./CloudflareST -p 0 -ipv6 -f ipv6.txt
 }
-
-
+#获取优选IP
+function get_best {
+    #best=`sed -n 2p result.csv | grep -o '^[^,]*'`
+    best=`sed -n 2p /root/CloudflareST/result.csv | cut -d, -f1`
+    if [ ! $best ] ; then
+        echo "Can not get the best Cloudflare IP"
+        exit 31
+    fi
+    echo "Best Cloudflare IP: $best"
+    if [ "$ip" == "$best" ] ; then
+        exit
+    fi
+}
 
 
