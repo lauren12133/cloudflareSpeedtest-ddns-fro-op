@@ -12,14 +12,20 @@ curl=`command -v curl 2> /dev/null`
 
 #获取测试IP
 function get_ip {
-    echo "record_name: $domain"
-    ip=`ping -c 1 $domain | head -1 | grep -o ' ([^)]*' | grep -o '[^ (]*$'`
-    if [ ! $ip ]; then
-        echo "Can not get the IP of $domain"
+    if [ $record_name ] ; then
+        name="$record_name.$domain"
+    else
+        name=$domain
+    fi
+    echo "Domain name: $name"
+    ip=`ping -c 1 $name | head -1 | grep -o ' ([^)]*' | grep -o '[^ (]*$'`
+    if [ ! $ip ] ; then
+        echo "Can not get the IP of $name"
         exit 1
     fi
     echo "Current IP: $ip"
 }
+
 
 #测试ipv4
 function test_ipv4 {
@@ -29,6 +35,7 @@ function test_ipv4 {
 function test_ipv6 {
     cd /root/CloudflareST && ./CloudflareST -p 0 -ipv6 -f ipv6.txt
 }
+
 
 
 
