@@ -1,5 +1,5 @@
 # 声明
-此项目是为了满足自己的需求在openwrt等基于BusyBox底层使用脚本，目的是优选IP后自动ddns到域名供某某使用，自己也只是懂点运行皮毛只更改了运行命令而已。。没能力自己写如cf自动ddns命令，如果你又欢迎提供。
+此项目是为了满足自己的需求在openwrt等基于BusyBox底层使用脚本，目的是优选IP后自动ddns到域名供某某使用，自己也只是懂点运行皮毛只更改了运行命令而已。。
 # 优化 DNS Cloudflare IP
 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest) 脚本：查找最快 Cloudflare IP 并更新域名解析记录。
 
